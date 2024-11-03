@@ -13,12 +13,6 @@ variable "purpose_tag" {
     type        = string
 }
 
-variable "hosts" {
-  description = "Number of hosts to create"
-  type = number
-  default = 2
-}
-
 variable "application_name" {
   description = "Application Name"
   type = string
