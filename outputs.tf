@@ -7,7 +7,7 @@ output "subnets" {
         // Public Subnets
         public = values({for k, v in aws_subnet.public: k => v.id})
         // if var.make_private is true, return private subnets
-        private = var.make_private ? values({for k, v in aws_subnet.private: k => v.id}) : null
+        private = var.make_private ? values({for k, v in aws_subnet.private: k => v.id}) : []
     }
 }
 
